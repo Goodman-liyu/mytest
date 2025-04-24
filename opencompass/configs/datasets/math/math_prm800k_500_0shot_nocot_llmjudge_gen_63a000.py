@@ -8,6 +8,11 @@ from opencompass.datasets import MATHDataset
 
 # ----------------------------- Detailed Config -----------------------------
 
+with read_base():
+    from opencompass.configs.models.qwen2_5.lmdeploy_qwen2_5_7b_instruct import (
+        models as judge_model,
+    )
+
 math_reader_cfg = dict(input_columns=['problem'], output_column='solution')
 
 math_infer_cfg = dict(
@@ -69,6 +74,14 @@ math_eval_cfg = dict(
                 ),
             ]),
         ),
+        dataset_cfg=dict(
+            type=MATHDataset,
+            path='/mnt/hwfile/opendatalab/air/liyu1/opencompass_data/math',
+            file_name='test_prm800k_500.json',
+            reader_cfg=math_reader_cfg,
+        ),
+        judge_cfg=judge_model[0],
+        output_path='outputs6/qwen_base_kk_200_20250423-17:19:33_QWEN_INSTRUCT_TEST',
         dict_postprocessor=dict(type=generic_llmjudge_postprocess),
     ),
     pred_role='BOT',
@@ -79,7 +92,7 @@ math_datasets = [
     dict(
         type=MATHDataset,
         abbr='math_prm800k_500-llmjudge',
-        path='opencompass/math',
+        path='/mnt/hwfile/opendatalab/air/liyu1/opencompass_data/math',
         file_name = 'test_prm800k_500.json',
         reader_cfg=math_reader_cfg,
         infer_cfg=math_infer_cfg,

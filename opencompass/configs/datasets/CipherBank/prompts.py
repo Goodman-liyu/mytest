@@ -12,7 +12,7 @@ INSTRUCTIONS = {
 ## Background:
     Decrypt the provided **Ciphertext** and return the corresponding **Plaintext** following the given examples.
     Think step by step.
-    Provide the **Plaintext** result in the format <result>text</result>, where text is the decrypted text.
+    Provide the **Plaintext** answer in the format <answer>text</answer>, where text is the decrypted text.
 ## Examples:
     * Example 1:
         - **Ciphertext**:
@@ -43,7 +43,7 @@ INSTRUCTIONS = {
 ## Background:
     Decrypt the provided **Ciphertext** and return the corresponding **Plaintext** following the given examples.
     Think step by step.
-    Provide the **Plaintext** result in the format <result>text</result>, where text is the decrypted text.
+    Provide the **Plaintext** answer in the format <answer>text</answer>, where text is the decrypted text.
 ## Examples:
     * Example 1:
         - **Ciphertext**:
@@ -74,7 +74,7 @@ INSTRUCTIONS = {
 ## Background:
     Decrypt the provided **Ciphertext** and return the corresponding **Plaintext** following the given examples.
     Think step by step.
-    Provide the **Plaintext** result in the format <result>text</result>, where text is the decrypted text.
+    Provide the **Plaintext** answer in the format <answer>text</answer>, where text is the decrypted text.
 ## Examples:
     * Example 1:
         - **Ciphertext**:
@@ -105,7 +105,7 @@ INSTRUCTIONS = {
 ## Background:
     Decrypt the provided **Ciphertext** and return the corresponding **Plaintext** following the given examples.
     Think step by step.
-    Provide the **Plaintext** result in the format <result>text</result>, where text is the decrypted text.
+    Provide the **Plaintext** answer in the format <answer>text</answer>, where text is the decrypted text.
 ## Examples:
     * Example 1:
         - **Ciphertext**:
@@ -136,7 +136,7 @@ INSTRUCTIONS = {
 ## Background:
     Decrypt the provided **Ciphertext** and return the corresponding **Plaintext** following the given examples.
     Think step by step.
-    Provide the **Plaintext** result in the format <result>text</result>, where text is the decrypted text.
+    Provide the **Plaintext** answer in the format <answer>text</answer>, where text is the decrypted text.
 ## Examples:
     * Example 1:
         - **Ciphertext**:
@@ -167,7 +167,7 @@ INSTRUCTIONS = {
 ## Background:
     Decrypt the provided **Ciphertext** and return the corresponding **Plaintext** following the given examples.
     Think step by step.
-    Provide the **Plaintext** result in the format <result>text</result>, where text is the decrypted text.
+    Provide the **Plaintext** answer in the format <answer>text</answer>, where text is the decrypted text.
 ## Examples:
     * Example 1:
         - **Ciphertext**:
@@ -198,7 +198,7 @@ INSTRUCTIONS = {
 ## Background:
     Decrypt the provided **Ciphertext** and return the corresponding **Plaintext** following the given examples.
     Think step by step.
-    Provide the **Plaintext** result in the format <result>text</result>, where text is the decrypted text.
+    Provide the **Plaintext** answer in the format <answer>text</answer>, where text is the decrypted text.
 ## Examples:
     * Example 1:
         - **Ciphertext**:
@@ -229,7 +229,7 @@ INSTRUCTIONS = {
 ## Background:
     Decrypt the provided **Ciphertext** and return the corresponding **Plaintext** following the given examples.
     Think step by step.
-    Provide the **Plaintext** result in the format <result>text</result>, where text is the decrypted text.
+    Provide the **Plaintext** answer in the format <answer>text</answer>, where text is the decrypted text.
 ## Examples:
     * Example 1:
         - **Ciphertext**:
@@ -260,7 +260,7 @@ INSTRUCTIONS = {
 ## Background:
     Decrypt the provided **Ciphertext** and return the corresponding **Plaintext** following the given examples.
     Think step by step.
-    Provide the **Plaintext** result in the format <result>text</result>, where text is the decrypted text.
+    Provide the **Plaintext** answer in the format <answer>text</answer>, where text is the decrypted text.
 ## Examples:
     * Example 1:
         - **Ciphertext**:
@@ -294,7 +294,7 @@ INSTRUCTIONS2 = {
 ## Background:
     Decrypt the provided **Ciphertext** and return the corresponding **Plaintext** following the given examples.
     Think step by step.
-    Provide the **Plaintext** result in the format <result>text</result>, where text is the decrypted text.
+    Provide the **Plaintext** answer in the format <answer>text</answer>, where text is the decrypted text.
 ## Algorithm Flow:
     Uses the Caesar cipher with a fixed shift of 13 positions. For each letter in the **Plaintext**, shift it forward by 13 positions in the alphabet to produce the **Ciphertext**.
 ## Examples:
@@ -327,7 +327,7 @@ INSTRUCTIONS2 = {
 ## Background:
     Decrypt the provided **Ciphertext** and return the corresponding **Plaintext** following the given examples.
     Think step by step.
-    Provide the **Plaintext** result in the format <result>text</result>, where text is the decrypted text.
+    Provide the **Plaintext** answer in the format <answer>text</answer>, where text is the decrypted text.
 ## Algorithm Flow:
     Uses the Atbash cipher. Each letter in the **Plaintext** is replaced with its Reverse counterpart in the alphabet.
 ## Examples:
@@ -360,7 +360,7 @@ INSTRUCTIONS2 = {
 ## Background:
     Decrypt the provided **Ciphertext** and return the corresponding **Plaintext** following the given examples.
     Think step by step.
-    Provide the **Plaintext** result in the format <result>text</result>, where text is the decrypted text.
+    Provide the **Plaintext** answer in the format <answer>text</answer>, where text is the decrypted text.
 ## Algorithm Flow:
     Uses the Polybius cipher. Each letter in the **Plaintext** is mapped to a pair of coordinates in the Polybius square, forming the **Ciphertext**.
 ## Examples:
@@ -393,7 +393,7 @@ INSTRUCTIONS2 = {
 ## Background:
     Decrypt the provided **Ciphertext** and return the corresponding **Plaintext** following the given examples.
     Think step by step.
-    Provide the **Plaintext** result in the format <result>text</result>, where text is the decrypted text.
+    Provide the **Plaintext** answer in the format <answer>text</answer>, where text is the decrypted text.
 ## Algorithm Flow:
     Uses the Vigenère cipher. Each letter in the **Plaintext** is shifted by the corresponding letter in the **Key** to produce the **Ciphertext**.
 ## Examples:
@@ -426,7 +426,7 @@ INSTRUCTIONS2 = {
 ## Background:
     Decrypt the provided **Ciphertext** and return the corresponding **Plaintext** following the given examples.
     Think step by step.
-    Provide the **Plaintext** result in the format <result>text</result>, where text is the decrypted text.
+    Provide the **Plaintext** answer in the format <answer>text</answer>, where text is the decrypted text.
 ## Algorithm Flow:
     Reverses the **Plaintext** to create the **Ciphertext**.
 ## Examples:
@@ -459,7 +459,7 @@ INSTRUCTIONS2 = {
 ## Background:
     Decrypt the provided **Ciphertext** and return the corresponding **Plaintext** following the given examples.
     Think step by step.
-    Provide the **Plaintext** result in the format <result>text</result>, where text is the decrypted text.
+    Provide the **Plaintext** answer in the format <answer>text</answer>, where text is the decrypted text.
 ## Algorithm Flow:
     For each pair of letters in the **Plaintext**, their positions are swapped to produce the **Ciphertext**. If the number of letters is odd, the last letter remains in its original position.
 ## Examples:
@@ -492,7 +492,7 @@ INSTRUCTIONS2 = {
 ## Background:
     Decrypt the provided **Ciphertext** and return the corresponding **Plaintext** following the given examples.
     Think step by step.
-    Provide the **Plaintext** result in the format <result>text</result>, where text is the decrypted text.
+    Provide the **Plaintext** answer in the format <answer>text</answer>, where text is the decrypted text.
 ## Algorithm Flow:
     For each letter in the **Plaintext**: 
         - If the ASCII value is even, add 1 to it to get the corresponding character in the **Ciphertext**.
@@ -527,7 +527,7 @@ INSTRUCTIONS2 = {
 ## Background:
     Decrypt the provided **Ciphertext** and return the corresponding **Plaintext** following the given examples.
     Think step by step.
-    Provide the **Plaintext** result in the format <result>text</result>, where text is the decrypted text.
+    Provide the **Plaintext** answer in the format <answer>text</answer>, where text is the decrypted text.
 ## Algorithm Flow:
     This encryption method converts each letter of the **Plaintext** into two letters in the **Ciphertext**, such that the average of their ASCII values equals the ASCII value of the original letter.
 ## Examples:
@@ -560,7 +560,7 @@ INSTRUCTIONS2 = {
 ## Background:
     Decrypt the provided **Ciphertext** and return the corresponding **Plaintext** following the given examples.
     Think step by step.
-    Provide the **Plaintext** result in the format <result>text</result>, where text is the decrypted text.
+    Provide the **Plaintext** answer in the format <answer>text</answer>, where text is the decrypted text.
 ## Algorithm Flow:
     The algorithm splits the **Plaintext** into words based on spaces. Each word is then individually encrypted using the Caesar cipher, resulting in the **Ciphertext**.
 ## Examples:

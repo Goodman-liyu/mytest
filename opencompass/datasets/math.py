@@ -194,6 +194,10 @@ def math_postprocess_v2(text: str) -> str:
     if cand_ans:
         return cand_ans
 
+    matches = re.findall(r"<answer>(.*?)</answer>", text, re.DOTALL)
+    if matches:
+        return matches[-1].strip()
+    
     for maybe_ans in text.split('.'):
         # if 'final answer' in maybe_ans.lower():
         if re.search('final answer|answer is', maybe_ans.lower()):

@@ -14,10 +14,10 @@ humaneval_infer_cfg = dict(
         template=dict(round=[
             dict(
                 role='HUMAN',
-                prompt='Complete the following python code:\n{prompt}'),
+                prompt='Now the user asks you to solve a code problem. After thinking, when you finally reach a conclusion, clearly state the answer within <answer> </answer> tags. i.e., <answer> </answer>. Complete the following python code:\n{prompt}\n'),
         ])),
     retriever=dict(type=ZeroRetriever),
-    inferencer=dict(type=GenInferencer, max_out_len=512))
+    inferencer=dict(type=GenInferencer))
 
 humaneval_eval_cfg = dict(
     evaluator=dict(type=HumanEvalEvaluator),

@@ -21,6 +21,15 @@ from opencompass.utils import get_data_path
 
 from .base import BaseDataset
 
+def mbpp_postprocess_v2(text: str) -> str:
+    matches = re.findall(r"<answer>(.*?)</answer>", text, re.DOTALL)
+    if matches:
+        return matches[-1].strip()
+    matches = re.findall(r"<code>(.*?)</code>", text, re.DOTALL)
+    if matches:
+        return matches[-1].strip()
+    return text
+
 
 @LOAD_DATASET.register_module()
 class MBPPDataset(BaseDataset):

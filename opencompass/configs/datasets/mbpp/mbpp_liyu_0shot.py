@@ -11,7 +11,7 @@ mbpp_infer_cfg = dict(
         template="You are an expert Python programmer, and here is your task: {text} Your code should pass these tests:\n\n {test_list}  \n[BEGIN]\n",
     ),
     retriever=dict(type=ZeroRetriever),
-    inferencer=dict(type=GenInferencer, max_out_len=512),
+    inferencer=dict(type=GenInferencer),
 )
 
 mbpp_eval_cfg = dict(evaluator=dict(type=MBPPEvaluator))

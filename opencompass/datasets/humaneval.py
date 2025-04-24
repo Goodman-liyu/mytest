@@ -181,6 +181,10 @@ class HumanEvalPlusEvaluator(BaseEvaluator):
 
 def humaneval_postprocess_v2(text: str) -> str:
     
+    matches = re.findall(r"<answer>(.*?)</answer>", text, re.DOTALL)
+    if matches:
+        return matches[-1].strip()
+
     print(text)
     blocks = re.findall(r'```\w*\n(.*?)```', text, re.DOTALL)
     if len(blocks) >= 1:

@@ -17,7 +17,8 @@ math_infer_cfg = dict(
             round=[
                 dict(
                     role='HUMAN',
-                    prompt='{problem}\nPlease reason step by step, and put your final answer within \\boxed{}.',
+                    #prompt='{problem}\nPlease reason step by step, and put your final answer within <answer> (\\boxed{}\\) </answer>.',
+                    prompt='Now the user asks you to solve a math problem. After thinking, when you finally reach a conclusion, clearly state the answer within <answer> </answer> tags. i.e., <answer> (\\boxed{}\\) </answer>. {problem}\n',
                 ),
             ]
         ),

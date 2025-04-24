@@ -32,28 +32,33 @@ models = [
     batch_size=8,
     run_cfg=dict(num_gpus=1),
     ),
-    dict(
-        type=HuggingFacewithChatTemplate,
-        abbr='instruct_template',
-        path='${MODEL_PATH}',
-        max_out_len=4096,
-        batch_size=8,
-        run_cfg=dict(num_gpus=1),
-    ),
-        dict(
-        type=HuggingFaceBaseModel,
-        abbr='base_template',
-        path='${MODEL_PATH}',
-        max_out_len=4096,
-        batch_size=8,
-        run_cfg=dict(num_gpus=1),
-    ),
 ]
 EOF
 echo "YAML 配置文件已成功创建：$output_file"
 
 
 opencompass \
--w outputs3/${DATANAME}_${START_TIME}_${EXP_NAME} \
---datasets math500_0shot_gen math500_4shot_gen aime2024_gen humaneval_gen mbpp_gen_0shot mbpp_gen_4shot kk_gen zebralogicbench_gen countdown_gen \
---models hf_qwen2_5_7b_instruct_${START_TIME} --max-num-worker 8  -a vllm 
+-w outputs/${DATANAME}_${START_TIME}_${EXP_NAME} \
+--datasets  math500_0shot_gen aime2024_gen humaneval_gen mbpp_gen_4shot  kk_gen zebralogicbench_gen countdown_gen \
+--models hf_qwen2_5_7b_instruct_${START_TIME} --max-num-worker 8  -a vllm --dump-eval-details
+
+
+# 如果测试template=qwen_instruct_template，则需要使用以下配置
+    #     dict(
+    #     type=HuggingFaceBaseModel,
+    #     abbr='base_template',
+    #     path='${MODEL_PATH}',
+    #     max_out_len=4096,
+    #     batch_size=8,
+    #     run_cfg=dict(num_gpus=1),
+    # ),
+
+# 如果测试no template，则需要使用以下配置
+    #     dict(
+    #     type=HuggingFacewithChatTemplate,
+    #     abbr='instruct_template',
+    #     path='${MODEL_PATH}',
+    #     max_out_len=4096,
+    #     batch_size=8,
+    #     run_cfg=dict(num_gpus=1),
+    # ),
