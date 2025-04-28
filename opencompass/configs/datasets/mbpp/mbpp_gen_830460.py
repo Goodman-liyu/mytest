@@ -16,7 +16,7 @@ mbpp_infer_cfg = dict(
                 ),
                 dict(
                     role="BOT",
-                    prompt="<answer> [BEGIN]\n 'def similar_elements(test_tup1, test_tup2):\r\n  res = tuple(set(test_tup1) & set(test_tup2))\r\n  return (res)' \n[DONE] <\answer> ",
+                    prompt="<answer> [BEGIN]\n 'def similar_elements(test_tup1, test_tup2):\r\n  res = tuple(set(test_tup1) & set(test_tup2))\r\n  return (res)' \n[DONE] </answer> ",
                 ),
                 dict(
                     role="HUMAN",
@@ -24,7 +24,7 @@ mbpp_infer_cfg = dict(
                 ),
                 dict(
                     role="BOT",
-                    prompt="<answer> [BEGIN]\n 'import math\r\ndef is_not_prime(n):\r\n    result = False\r\n    for i in range(2,int(math.sqrt(n)) + 1):\r\n        if n % i == 0:\r\n            result = True\r\n    return result' \n[DONE] <\answer> ",
+                    prompt="<answer> [BEGIN]\n 'import math\r\ndef is_not_prime(n):\r\n    result = False\r\n    for i in range(2,int(math.sqrt(n)) + 1):\r\n        if n % i == 0:\r\n            result = True\r\n    return result' \n[DONE] </answer> ",
                 ),
                 dict(
                     role="HUMAN",
@@ -32,7 +32,7 @@ mbpp_infer_cfg = dict(
                 ),
                 dict(
                     role="BOT",
-                    prompt="<answer> [BEGIN]\n 'import heapq as hq\r\ndef heap_queue_largest(nums,n):\r\n  largest_nums = hq.nlargest(n, nums)\r\n  return largest_nums' \n[DONE] <\answer> ",
+                    prompt="<answer> [BEGIN]\n 'import heapq as hq\r\ndef heap_queue_largest(nums,n):\r\n  largest_nums = hq.nlargest(n, nums)\r\n  return largest_nums' \n[DONE] </answer> ",
                 ),
                 dict(
                     role="HUMAN",
