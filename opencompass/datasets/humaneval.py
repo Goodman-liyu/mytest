@@ -180,18 +180,23 @@ class HumanEvalPlusEvaluator(BaseEvaluator):
 
 
 def humaneval_postprocess_v2(text: str) -> str:
+    # 1. 首先尝试提取```python ```代码块（使用最后一个匹配）
+    python_blocks = re.findall(r'```python\s*\n(.*?)```', text, re.DOTALL)
+    if python_blocks:
+        return python_blocks[-1].strip()
     
-    matches = re.findall(r"<answer>(.*?)</answer>", text, re.DOTALL)
-    if matches:
-        return matches[-1].strip()
-
-    print(text)
-    blocks = re.findall(r'```\w*\n(.*?)```', text, re.DOTALL)
-    if len(blocks) >= 1:
-        text = blocks[0]
-    text = text.strip(" ")
-    print(text)
-    return text
+    # 2. 如果没有，则尝试提取普通``` ```代码块（使用最后一个匹配）
+    generic_blocks = re.findall(r'```\s*\n(.*?)```', text, re.DOTALL)
+    if generic_blocks:
+        return generic_blocks[-1].strip()
+    
+    # 3. 如果还没有，则尝试提取<answer>标签内容（使用最后一个匹配）
+    answer_matches = re.findall(r'<answer>(.*?)</answer>', text, re.DOTALL)
+    if answer_matches:
+        return answer_matches[-1].strip()
+    
+    # 如果以上都没有匹配到，返回原始文本（去除首尾空格）
+    return text.strip()
 
 def humaneval_postprocess_v3(text: str) -> str:
     blocks = re.findall(r'```\w*\n(.*?)```', text, re.DOTALL)
