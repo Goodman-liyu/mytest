@@ -348,6 +348,7 @@ class MBPPEvaluator(BaseEvaluator):
         text = re.split(r"'?\s*\[?DONE\]?", text)[0]
         text = text.replace('\\_', '_')
         text = text.strip()
+        text = text.strip('`')
         return text
 
     def _process_test(self, test_case, pred):
